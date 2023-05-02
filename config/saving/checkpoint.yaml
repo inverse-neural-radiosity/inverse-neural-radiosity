@@ -1,0 +1,4 @@
+checkpoint:
+  step_size: 2000
+  first_step: false
+  is_latest: false

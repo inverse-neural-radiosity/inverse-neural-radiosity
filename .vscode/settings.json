@@ -1,0 +1,33 @@
+{
+  "files.exclude": {
+      "**/.git": true,
+      "**/.svn": true,
+      "**/.hg": true,
+      "**/CVS": true,
+      "**/.DS_Store": true,
+      "**/Thumbs.db": true,
+      "**/__pycache__": true,
+      "**/node_modules": true
+  },
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "python.formatting.provider": "autopep8",
+  "python.analysis.autoImportCompletions": false,
+  "isort.args": [
+      "--src=${workspaceFolder}"
+  ],
+  "jupyter.notebookFileRoot": "${workspaceFolder}",
+  "python.formatting.autopep8Args": [
+      "--max-line-length",
+      "120",
+      "--ignore",
+      "E226,E24,W50,W690,E731",
+  ],
+  "python.linting.enabled": true,
+  "python.linting.pylintEnabled": true,
+  "python.linting.pylintArgs": [
+      "--generated-members=numpy.*,torch.*,cv2.*,mitsuba.*,drjit.*",
+      "--disable=import-error,missing-module-docstring,missing-function-docstring,missing-class-docstring,logging-fstring-interpolation,line-too-long,invalid-name,consider-using-from-import,too-many-locals,relative-beyond-top-level,global-statement,unspecified-encoding,consider-using-enumerate,abstract-method,arguments-differ,disallowed-name,too-many-arguments,too-many-instance-attributes,too-many-ancestors,redefined-outer-name,broad-except,unused-argument,too-few-public-methods,non-ascii-name,logging-not-lazy,no-member",
+  ],
+}

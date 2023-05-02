@@ -1,0 +1,5 @@
+name: l2_relative_both
+config:
+  annealing: false
+  # auto set
+  n_steps:

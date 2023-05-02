@@ -1,0 +1,8 @@
+defaults:
+  - common
+  - _self_
+
+name: mitsuba
+config:
+  width:
+  height:

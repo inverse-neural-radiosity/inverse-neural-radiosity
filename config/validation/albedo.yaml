@@ -1,0 +1,12 @@
+albedo:
+  name: albedo
+  step_size: 500
+  first_step: true
+  rendering:
+    integrator: albedo
+    config: {}
+    post_init: {}
+    # defaults to same as training
+    spp:
+    width:
+    height:

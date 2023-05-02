@@ -1,0 +1,65 @@
+defaults:
+  - rendering: nerad
+  - recons_loss: l2_relative_gt
+  - residual_loss: l2_relative_prediction
+  - LHS_recons_loss: l2_relative_prediction
+  - bsdf: diffuse
+  - validation: [albedo, image]
+  - saving: [latest]
+  - envmap: gt
+  - _self_
+
+name: train
+out_root: /output/nerad/experiments
+out_dir: ${now:%Y-%m-%d}-${now:%H-%M-%S}-${name}
+
+hydra:
+  run:
+    dir: ${out_root}/${out_dir}
+
+
+resume: true
+validation_view: 0
+radiance_cache:
+
+
+dataset:
+  scene: ???
+  cameras: ???
+  n_views: -1
+  albedo:
+  roughness:
+
+batch_size: 256
+learning_rate: 0.001
+
+lr_decay_start: -1
+lr_decay_rate: 0.1
+lr_decay_steps: 1000
+lr_decay_min_rate: 0.01
+
+n_steps: 600
+shuffle: true
+
+learn_envmap: false
+
+# pytorch Adam default
+beta_1: 0.9
+beta_2: 0.999
+
+compute:
+  seed: 999
+  torch_detect_anomaly: false
+  dr_optimization_flags: false
+
+check_gradients: false
+profile_vram: false
+profile_time: false
+profile_time_sync_cuda: true
+profile_counter: false
+update_loss_step_size: 1
+
+is_watchdog_init: false
+abort_step_size: 0
+disable_optimizer_step: false
+avoid_empty_batches: false

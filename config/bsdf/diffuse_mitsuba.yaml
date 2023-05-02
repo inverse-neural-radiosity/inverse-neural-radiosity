@@ -1,0 +1,13 @@
+name: diffuse
+post_init: {}
+texture:
+  reflectance:
+    post_init:
+      function: reflectance_mitsuba
+      kwargs:
+        grid_size: 256
+        value: 0.5
+        # automatically set
+        device:
+        scene_min:
+        scene_max:

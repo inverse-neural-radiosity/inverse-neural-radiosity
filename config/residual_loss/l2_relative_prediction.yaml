@@ -1,0 +1,5 @@
+name: l2_relative_prediction
+config:
+  annealing: false
+  # auto set
+  n_steps:

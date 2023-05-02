@@ -1,0 +1,12 @@
+defaults:
+  - common
+  - _self_
+
+name: tensor
+config:
+  function: envmap_tensor
+  kwargs:
+    width: 1024
+    height: 512
+    scene_min:
+    scene_max:

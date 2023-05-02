@@ -1,0 +1,18 @@
+defaults:
+  - train
+  - override saving: []
+  - override validation: []
+  - _self_
+
+saving: {}
+validation: {}
+
+batch_size: 128
+
+n_steps: 100
+profile_vram: false
+profile_time: true
+profile_time_sync_cuda: false
+profile_counter: false
+
+update_loss_step_size: 100

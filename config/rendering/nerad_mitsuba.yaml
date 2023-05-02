@@ -1,0 +1,13 @@
+defaults:
+  - nerad_sg_base
+  - _self_
+
+post_init:
+  function: radiance_mitsuba
+  kwargs:
+    grid_size: 256
+    value: 0.5
+    # automatically set
+    device:
+    scene_min:
+    scene_max:

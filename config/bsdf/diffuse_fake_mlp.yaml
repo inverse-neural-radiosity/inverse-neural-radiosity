@@ -1,0 +1,10 @@
+defaults:
+  - diffuse
+  - _self_
+
+texture:
+  reflectance:
+    post_init:
+      function: fake_reflectance_net
+      kwargs:
+        value: 0.5

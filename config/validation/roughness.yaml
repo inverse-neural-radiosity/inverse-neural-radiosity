@@ -1,0 +1,12 @@
+roughness:
+  name: roughness
+  step_size: 500
+  first_step: true
+  rendering:
+    integrator: roughness
+    config: {}
+    post_init: {}
+    # defaults to same as training
+    spp:
+    width:
+    height:

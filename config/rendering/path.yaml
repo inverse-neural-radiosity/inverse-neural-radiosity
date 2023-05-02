@@ -1,0 +1,9 @@
+defaults:
+  - rendering_base
+  - _self_
+
+integrator: path
+config:
+  hide_emitters: true
+  max_depth: 22
+  rr_depth: 5

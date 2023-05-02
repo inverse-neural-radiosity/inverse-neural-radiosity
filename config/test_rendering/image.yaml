@@ -1,0 +1,5 @@
+image:
+  spp: 16
+  width:
+  height:
+  post_init: {}

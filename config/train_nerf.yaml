@@ -1,0 +1,30 @@
+defaults:
+  - train
+  - override bsdf: principled
+  - override saving: [checkpoint, latest]
+  - override validation: [albedo, roughness, image]
+  - _self_
+
+saving:
+  checkpoint:
+    step_size: 5000
+  latest:
+    step_size: 100
+
+batch_size: 64
+learning_rate: 0.0005
+rendering:
+  spp: 64
+
+validation:
+  albedo:
+    step_size: 1000
+  roughness:
+    step_size: 1000
+  image:
+    step_size: 1000
+
+n_steps: 10000
+validation_view: 12
+avoid_empty_batches: true
+name: ???

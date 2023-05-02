@@ -1,0 +1,24 @@
+defaults:
+  - rendering: mypath
+  - validation: [image, albedo, roughness]
+  - _self_
+
+name: ???
+out_root: /data/nerad/datasets
+out_dir: ${name}
+
+hydra:
+  run:
+    dir: ${out_root}/${out_dir}
+
+overwrite: false
+
+dataset:
+  scene: ???
+  n_views: 200
+  cameras:
+
+compute:
+  seed: 1
+  torch_detect_anomaly: false
+  dr_optimization_flags: true

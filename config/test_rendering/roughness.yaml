@@ -1,0 +1,7 @@
+roughness:
+  integrator: roughness
+  spp: 8
+  width:
+  height:
+  config: {}
+  post_init: {}

@@ -1,0 +1,11 @@
+defaults:
+  - rendering_base
+  - _self_
+
+integrator: myprb
+config:
+  hide_emitters: true
+  allow_eval_direction_call: true
+  max_depth: 1024
+  rr_depth: 1
+  rr_prob: 1.0

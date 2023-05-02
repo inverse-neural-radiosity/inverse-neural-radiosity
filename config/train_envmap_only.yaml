@@ -1,0 +1,10 @@
+defaults:
+  - train
+  - override bsdf: gt
+  - override envmap: mitsuba
+  - _self_
+
+envmap:
+  config:
+    width: 256
+    height: 128

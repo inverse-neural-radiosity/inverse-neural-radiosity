@@ -1,0 +1,7 @@
+albedo:
+  integrator: albedo
+  spp: 8
+  width:
+  height:
+  config: {}
+  post_init: {}

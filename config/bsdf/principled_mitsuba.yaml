@@ -1,0 +1,23 @@
+name: principled
+post_init: {}
+texture:
+  base_color:
+    post_init:
+      function: reflectance_mitsuba
+      kwargs:
+        grid_size: 256
+        value: 0.5
+        # automatically set
+        device:
+        scene_min:
+        scene_max:
+  roughness:
+    post_init:
+      function: reflectance_mitsuba
+      kwargs:
+        grid_size: 256
+        value: 0.5
+        # automatically set
+        device:
+        scene_min:
+        scene_max:

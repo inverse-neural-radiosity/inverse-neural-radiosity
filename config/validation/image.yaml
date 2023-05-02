@@ -1,0 +1,12 @@
+image:
+  name: image
+  step_size: 2000
+  first_step: true
+  rendering:
+    # defaults to same as training
+    integrator:
+    post_init:
+    config:
+    spp:
+    width:
+    height:

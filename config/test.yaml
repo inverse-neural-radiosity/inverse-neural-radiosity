@@ -1,0 +1,30 @@
+defaults:
+  - test_rendering: [image, albedo, roughness]
+  - _self_
+
+# checkpoint loaded from:
+# [experiment]/checkpoints/[ckpt].ckpt
+experiment: ???
+ckpt: latest
+n_views: -1
+views: []
+
+hydra:
+  run:
+    dir: ${experiment}/test/${ckpt}
+
+compute:
+  seed: 999
+  torch_detect_anomaly: false
+  dr_optimization_flags: false
+
+# copy from training
+# you can override from command line, e.g.:
+# +dataset.n_views=0    # render all views
+# +dataset.cameras=xxx  # render test cameras
+dataset:
+
+# copy from training
+# can be overriden but probably shouldn't
+bsdf:
+envmap:

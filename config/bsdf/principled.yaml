@@ -1,0 +1,35 @@
+name: principled
+post_init: {}
+texture:
+  base_color:
+    post_init:
+      function: reflectance_net
+      kwargs:
+        width: 256
+        hidden: 0
+        embedding:
+          otype: HashGrid
+          n_levels: 17
+          n_features_per_level: 2
+          log2_hashmap_size: 18
+          base_resolution: 2
+          per_level_scale: 1.5
+        # automatically set
+        scene_min:
+        scene_max:
+  roughness:
+    post_init:
+      function: reflectance_net
+      kwargs:
+        width: 256
+        hidden: 0
+        embedding:
+          otype: HashGrid
+          n_levels: 17
+          n_features_per_level: 2
+          log2_hashmap_size: 18
+          base_resolution: 2
+          per_level_scale: 1.5
+        # automatically set
+        scene_min:
+        scene_max:

@@ -1,0 +1,7 @@
+__pycache__/
+/scripts
+/data
+/output
+/notebooks
+.ipynb_checkpoints
+nohup.out

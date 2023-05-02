@@ -1,0 +1,21 @@
+defaults:
+  - nerad_sg_base
+  - _self_
+
+post_init:
+  function: radiance_net
+  kwargs:
+    width: 256
+    hidden: 2
+    embedding:
+      otype: HashGrid
+      n_levels: 17
+      n_features_per_level: 2
+      log2_hashmap_size: 18
+      base_resolution: 2
+      per_level_scale: 1.5
+    # automatically set
+    scene_min:
+    scene_max:
+  # auto set
+  residual_function:

@@ -1,0 +1,23 @@
+defaults:
+  - rendering_base
+  - _self_
+
+integrator: nerad
+config:
+  hide_emitters: true
+  return_depth: false
+  max_depth: 22
+  rr_depth: 5
+  second_residual: true
+  random_residual: false
+  detach_radiance_gradients_in_residual: true
+  detach_non_radiance_gradients_in_residual: true
+  detach_radiance_gradients_in_rhs: true
+  return_only_LHS: false
+
+post_init:
+  # override in child config
+  function:
+  kwargs: {}
+  # auto set
+  residual_function:

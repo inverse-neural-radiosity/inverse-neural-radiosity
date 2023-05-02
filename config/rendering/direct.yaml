@@ -1,0 +1,10 @@
+defaults:
+  - rendering_base
+  - _self_
+
+integrator: mydirect
+config:
+  hide_emitters: true
+  return_depth: false
+  max_depth: 22
+  rr_depth: 5

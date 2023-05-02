@@ -1,0 +1,17 @@
+defaults:
+  - rendering_base
+  - _self_
+
+integrator: nerad_mb
+config:
+  hide_emitters: true
+  return_depth: false
+  max_depth: 2
+  rr_depth: 5
+
+post_init:
+  # override in child config
+  function:
+  kwargs: {}
+  # auto set
+  residual_function:

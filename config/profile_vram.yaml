@@ -1,0 +1,6 @@
+defaults:
+  - profile_train
+  - _self_
+
+profile_vram: true
+profile_time: false

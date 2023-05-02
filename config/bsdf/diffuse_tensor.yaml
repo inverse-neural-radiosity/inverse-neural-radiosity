@@ -1,0 +1,12 @@
+name: diffuse
+post_init: {}
+texture:
+  reflectance:
+    post_init:
+      function: reflectance_tensor
+      kwargs:
+        grid_size: 256
+        value: 0.5
+        # automatically set
+        scene_min:
+        scene_max:
