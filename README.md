@@ -38,7 +38,7 @@ Training scripts can be found in `./sample_scripts`. Copy them to `./scripts` an
 
 As an exmple, to reconstruct the Staircase scene, run **in this folder**:
 
-```
+```bash
 source ./init/init.source  # do this once per shell
 
 bash ./scripts/train-staircase/nerad_principled.sh  # our method
@@ -49,7 +49,7 @@ bash ./scripts/train-staircase/prb_principled.sh  # PRB
 
 Suppose the training folder is `/output/nerad/staircase/2023-04-25-06-21-10-nerad`, simply run:
 
-```
+```bash
 python test.py \
     test_rendering.image.spp=512 \
     test_rendering.albedo.spp=512 \
@@ -58,3 +58,16 @@ python test.py \
 ```
 
 All views in the dataset is rendered to `$TRAINING_FOLDER/test/latest`. Check `test.py` and `nerad/model/config.py` for available options.
+
+## Cite
+
+```bibtex
+@misc{hadadan2023inverse,
+      title={Inverse Global Illumination using a Neural Radiometric Prior},
+      author={Saeed Hadadan and Geng Lin and Jan Novák and Fabrice Rousselle and Matthias Zwicker},
+      year={2023},
+      eprint={2305.02192},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+}
+```
